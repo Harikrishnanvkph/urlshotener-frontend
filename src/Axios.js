@@ -4,7 +4,7 @@ import axios from "axios";
 async function login(credential,password){
     const status = await axios(
         {
-            url : "http://localhost:3000/login",
+            url : "https://urlshortener-backend-yxml.onrender.com/login",
             method : "post",
             data : {
                 mail : credential,
@@ -17,7 +17,7 @@ async function login(credential,password){
 
 async function forgotPass(mail){
     const status = await axios({
-        url : "http://localhost:3000/password_reset",
+        url : "https://urlshortener-backend-yxml.onrender.com/password_reset",
         method : "post",
         data : {
             mail : mail
@@ -28,7 +28,7 @@ async function forgotPass(mail){
 
 async function checkSecretKeyWeb(mail,webKey,secretKey){
     const status = await axios({
-        url : "http://localhost:3000/checkKeyValidate",
+        url : "https://urlshortener-backend-yxml.onrender.com/checkKeyValidate",
         method : "post",
         data : {
             mail : mail,
@@ -41,7 +41,7 @@ async function checkSecretKeyWeb(mail,webKey,secretKey){
 
 async function checkSecretKey(mail,secretKey){
     const status = await axios({
-        url : "http://localhost:3000/checkKey",
+        url : "https://urlshortener-backend-yxml.onrender.com/checkKey",
         method : "post",
         data : {
             mail : mail,
@@ -53,7 +53,7 @@ async function checkSecretKey(mail,secretKey){
 
 async function resetPass(mail,pass){
     const status = await axios({
-        url : "http://localhost:3000/set/password",
+        url : "https://urlshortener-backend-yxml.onrender.com/set/password",
         method : "post",
         data : {
             mail : mail,
@@ -65,7 +65,7 @@ async function resetPass(mail,pass){
 
 async function createAccount(mail,firstname,lastname,pass){
     const status = await axios({
-        url : "http://localhost:3000/createUser",
+        url : "https://urlshortener-backend-yxml.onrender.com/createUser",
         method : "post",
         data : {
             mail : mail,
@@ -79,7 +79,7 @@ async function createAccount(mail,firstname,lastname,pass){
 
 async function shortUrlClick(mail,pathname,search){
     const status = await axios({
-        url : "http://localhost:3000/shortUrlClick",
+        url : "https://urlshortener-backend-yxml.onrender.com/shortUrlClick",
         method : "post",
         data : {
             mail : mail,
@@ -92,7 +92,7 @@ async function shortUrlClick(mail,pathname,search){
 
 async function getUrls(mail){
     const status = await axios({
-        url : "http://localhost:3000/getUrls",
+        url : "https://urlshortener-backend-yxml.onrender.com/getUrls",
         method : "post",
         data : {
             mail : mail
